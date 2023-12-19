@@ -199,3 +199,36 @@ console.log(charMostApp("ciao come stai tutto bene ??????"));
 
 console.log(charMostApp("oggi è proprio una bellissima giornata!"));
 /*********************************************************/
+
+/*			ESERCIZIO extra 2			*/
+
+const anagramCheck = function (first, second) {
+  first_arr = first.split("");
+  second_arr = second.split("");
+  for (let i = 0; i < first_arr.length; i++) {
+    if (first_arr[i] === " ") first_arr.splice(i, 1);
+  }
+  for (let i = 0; i < second_arr.length; i++) {
+    if (second_arr[i] === " ") second_arr.splice(i, 1);
+  }
+  if (first_arr.length !== second_arr.length) {
+    return false;
+  }
+
+  let index;
+  for (let i = 0; i < first_arr.length; i++) {
+    index = second_arr.indexOf(first_arr[i]);
+    if (index >= 0) {
+      second_arr.splice(index, 1);
+    }
+  }
+  if (second_arr.length === 0) {
+    return true;
+  }
+  return false;
+};
+console.log(anagramCheck("roma", "ramo"));
+console.log(anagramCheck("salsa", "salas"));
+console.log(anagramCheck("ciao come stai", "tutto bene"));
+console.log(anagramCheck("quanti anni hai", "inna iahitnauq"));
+/*********************************************************/
