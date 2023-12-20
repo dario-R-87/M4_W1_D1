@@ -262,15 +262,29 @@ const anagramListCheck = function (arr, word) {
 console.log(anagramListCheck(["omar","roma","radio","armadio","amor","maro","rama"], "ramo"));
 /*********************************************************/
 
+/*			ESERCIZIO extra 4			*/
+
+const palindCheck = function (str) {
+ for(let i=0; i<str.length; i++){
+  if((str.length-2*i-1)>=1){
+   if(str.charAt(i)!==str.charAt(str.length-i-1))
+    return false;
+  }
+ }
+ return true;
+};
+console.log(palindCheck("itopinonavevanonipoti"));
+console.log(palindCheck("tavolino"));
+console.log(palindCheck("osso"));
+console.log(palindCheck("abcdefedcba"));
+console.log(palindCheck("cellulare"));
+/*********************************************************/
 
 
 
 
 
-
-/*3. Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri), ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
-Per esempio, partendo da “cartine” e [”carenti”, “incerta”, “espatrio”], il valore ritornato deve essere [”carenti”, “incerta”].
-4. Partendo da una stringa passata come parametro, ritorna `true` se la stringa è palindroma o `false` se non lo è.
+/*
 5. Partendo da un numero intero (dai parametri) ritorna un numero che contenga le stesse cifre, ma in ordine contrario. Es. 189 ⇒ 981
 6. Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console una “scala” creata con il carattere “#” e avente X scalini.
 Es.
