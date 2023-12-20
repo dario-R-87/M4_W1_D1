@@ -280,22 +280,64 @@ console.log(palindCheck("abcdefedcba"));
 console.log(palindCheck("cellulare"));
 /*********************************************************/
 
+/*			ESERCIZIO extra 5			*/
+
+const numInvert = function (n){
+ n = n+"";
+ const n_split = n.split("");
+ const arr_reverse = n_split.reverse();
+ const str_reverse = arr_reverse.join("");
+ return parseInt(str_reverse);
+ 
+};
+console.log(numInvert(65498));
+console.log(numInvert(123456789));
+
+/*********************************************************/
+
+/*			ESERCIZIO extra 6			*/
+
+const stairs = function (x){
+ let stairs_str = "";
+ for(let i=0; i<x; i++){
+  for(let y=0; y<i+1; y++){
+   stairs_str += "#";
+  }
+  stairs_str += "\n";
+ } 
+ return stairs_str;
+};
+console.log(stairs(5));
+console.log(stairs(17));
+
+/*********************************************************/
+
+/*			ESERCIZIO extra 7			*/
+
+const strInvert = function (str){
+ let invStr="";
+ for(let i=str.length-1; i>=0; i--){
+  invStr+=str.charAt(i);
+ }
+ return invStr;
+};
+console.log(strInvert("Hello World!"));
 
 
+/*********************************************************/
+
+/*			ESERCIZIO extra 8			*/
+
+/*const arraySplit = function (array,y){
+
+};
+console.log();*/
+
+
+/*********************************************************/
 
 
 /*
-5. Partendo da un numero intero (dai parametri) ritorna un numero che contenga le stesse cifre, ma in ordine contrario. Es. 189 ⇒ 981
-6. Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console una “scala” creata con il carattere “#” e avente X scalini.
-Es.
-X = 2
-'# '
-'##'
-X = 3
-'# '
-'## '
-'###'
-7. Crea una funzione che, data una stringa come parametro, ritorni la stessa stringa, ma al contrario. Es. “Ciao” ****⇒ “oaiC”
 8. Crea una funzione che accetti un array e un numero Y come parametro. Dividi l’array in sotto-array aventi lunghezza Y.
 Es. array: [1, 2, 3, 4], y: 2 ⇒ [[ 1, 2], [3, 4]]
 array: [1, 2, 3, 4, 5], y: 4 ⇒ [[ 1, 2, 3, 4], [5]]
